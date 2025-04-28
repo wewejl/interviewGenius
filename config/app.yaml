@@ -14,4 +14,12 @@ database:
   host: "127.0.0.1"
   port: 3306
   name: "interview_genius"
-  tablePrefix: "" 
+  tablePrefix: ""
+
+alipay:
+  app_id: "您的支付宝应用ID"
+  private_key: "您的应用私钥"
+  is_prod: false  # 是否生产环境
+  app_public_cert: "应用公钥证书内容"
+  alipay_root_cert: "支付宝根证书内容"
+  alipay_public_cert: "支付宝公钥证书内容" 
