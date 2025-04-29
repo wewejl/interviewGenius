@@ -1,8 +1,8 @@
 package config
 
 import (
-	"interviewGenius/pkg/setting"
-
+	"interviewGenius/internal/pkg/setting"
+	"os"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"

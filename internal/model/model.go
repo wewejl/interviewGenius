@@ -2,7 +2,7 @@ package model
 
 import (
 	"fmt"
-	"interviewGenius/pkg/setting"
+	"interviewGenius/internal/pkg/setting"
 	"time"
 
 	"gorm.io/driver/mysql"

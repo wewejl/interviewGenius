@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"interviewGenius/pkg/util"
+	"interviewGenius/internal/pkg/util"
 	"net/http"
 	"strings"
 

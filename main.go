@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"interviewGenius/config"
 	"interviewGenius/internal/model"
-	"interviewGenius/pkg/setting"
-	"interviewGenius/router"
+	"interviewGenius/internal/pkg/setting"
+	"interviewGenius/internal/router"
 	"net/http"
 	"time"
 

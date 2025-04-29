@@ -53,12 +53,21 @@ func GetRoleByName(roleName string) (*Role, error) {
 }
 
 // GetRoleList 获取角色列表
-func GetRoleList() ([]*Role, error) {
+func GetRoleList(page, limit int) ([]*Role, int64, error) {
 	var roles []*Role
-	if err := DB.Find(&roles).Error; err != nil {
-		return nil, err
+	var total int64
+
+	offset := (page - 1) * limit
+
+	if err := DB.Model(&Role{}).Count(&total).Error; err != nil {
+		return nil, 0, err
 	}
-	return roles, nil
+
+	if err := DB.Preload("Permissions").Offset(offset).Limit(limit).Find(&roles).Error; err != nil {
+		return nil, 0, err
+	}
+
+	return roles, total, nil
 }
 
 // UpdateRole 更新角色
